@@ -8,13 +8,13 @@ class Company:
 
 		self.data = {}
 	
-		self.data['name'] = fake.name()
+		self.data['name'] = fake.company()
 		self.data['file_number'] = fake.random_number()
 		self.data['jurisdiction'] = fake.lexify(text="????")
 		self.data['status'] = fake.word()
 		self.data['inactivationDate'] = fake.date()
 		self.data['struck_off_date'] = fake.date()
-		self.data['registrationData'] = fake.sentence()
+		self.data['registrationData'] = fake.bs()
 
 	def toRow(self):
 		fields = self.data.keys()
