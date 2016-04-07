@@ -11,7 +11,7 @@ class Company:
 		self.data['name'] = fake.company()
 		self.data['file_number'] = fake.random_number()
 		self.data['jurisdiction'] = fake.lexify(text="????")
-		self.data['status'] = fake.word()
+		self.data['status'] = fake.random_element(elements=("active", "inactive"))
 		self.data['inactivationDate'] = fake.date()
 		self.data['struck_off_date'] = fake.date()
 		self.data['registrationData'] = fake.bs()
